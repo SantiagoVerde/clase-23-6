@@ -5,3 +5,5 @@ from mangum import Mangum
 app = FastAPI()
 app.include_router(router)
 app.get("/")
+async def root():
+  return ("Hello Worl")
