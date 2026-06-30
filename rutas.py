@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 router = APIRouter()
-
+@router.get("/")
 @router.get("/dispersion_tactica")
 async def root(jamming: bool, firma_invalida: bool, navegacion_confiable: bool, enlace_cuantico_seguro: bool, lider_peligra: bool, fallo_eco_laser: bool):
         if (jamming == True or lider_peligra == True) and (navegacion_confiable == False or firma_invalida == True):    
